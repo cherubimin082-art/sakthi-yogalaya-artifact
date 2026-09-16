@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sakthi Yogalaya | Online Yoga Teacher Training</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Build your knowledge, practice and confidence to become a certified yoga teacher through Sakthi Yogalaya's live online Yoga Teacher Training, designed for students across the USA.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233E4E36'/%3E%3Cpath d='M50 24c-9 8-9 15 0 26-9 8-9 15 0 26' stroke='%23A9843F' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 24c9 8 9 15 0 26 9 8 9 15 0 26' stroke='%23A9843F' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ivory:#F6F1E4;
+  --parchment:#EEE4CC;
+  --card:#FCFAF3;
+  --ink:#262620;
+  --ink-soft:#5B5A4C;
+  --moss:#3E4E36;
+  --moss-soft:#6C7D5F;
+  --sage:#8CA07E;
+  --brass:#A9843F;
+  --brass-soft:#C9A25E;
+  --line:#DED2AE;
+  --shadow:0 24px 60px rgba(38,38,32,.12);
+  --shadow-sm:0 8px 22px rgba(38,38,32,.08);
+  --banner-bg:#3E4E36;
+  --banner-bg-2:#2E3A28;
+  --on-banner:#F1ECDD;
+  --on-banner-soft:rgba(241,236,221,.72);
+  --on-banner-line:rgba(241,236,221,.16);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ivory:#1A1C16;
+    --parchment:#23261D;
+    --card:#242720;
+    --ink:#EFE9D7;
+    --ink-soft:#B7B29B;
+    --moss:#8AA274;
+    --moss-soft:#9FB48A;
+    --sage:#8FA47E;
+    --brass:#D3AD64;
+    --brass-soft:#E2C283;
+    --line:#3A3B2E;
+    --shadow:0 24px 60px rgba(0,0,0,.4);
+    --shadow-sm:0 8px 22px rgba(0,0,0,.3);
+    --banner-bg:#202A1A;
+    --banner-bg-2:#161E11;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ivory:#1A1C16;
+  --parchment:#23261D;
+  --card:#242720;
+  --ink:#EFE9D7;
+  --ink-soft:#B7B29B;
+  --moss:#8AA274;
+  --moss-soft:#9FB48A;
+  --sage:#8FA47E;
+  --brass:#D3AD64;
+  --brass-soft:#E2C283;
+  --line:#3A3B2E;
+  --shadow:0 24px 60px rgba(0,0,0,.4);
+  --shadow-sm:0 8px 22px rgba(0,0,0,.3);
+  --banner-bg:#202A1A;
+  --banner-bg-2:#161E11;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;padding:0 clamp(16px,5vw,0px);background:var(--ivory);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-width:0}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+button{font-family:inherit}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;color:var(--ink);text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+.eyebrow .term{font-family:'Fraunces',serif;font-style:italic;font-weight:500;letter-spacing:.02em;text-transform:none;font-size:.92rem;color:var(--moss-soft)}
+.eyebrow:before{content:'';width:22px;height:1px;background:var(--brass)}
+.h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:500;line-height:1.16;margin-bottom:14px}
+.h2 em{font-style:italic;color:var(--moss-soft);font-weight:500}
+.lede{color:var(--ink-soft);font-size:1rem;max-width:60ch;line-height:1.8}
+section{padding-block:clamp(56px,9vw,104px)}
+.center{text-align:center;margin-inline:auto}
+.center .lede{margin-inline:auto}
+
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 30px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;min-height:44px}
+.btn-brass{background:var(--brass);color:#211A0C;box-shadow:0 10px 26px rgba(169,132,63,.32)}
+.btn-brass:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(169,132,63,.4)}
+.btn-line{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--ivory)}
+.btn-line-light{background:transparent;border-color:rgba(239,233,215,.5);color:var(--ivory)}
+.btn-line-light:hover{background:var(--ivory);color:var(--moss)}
+.btn-block{width:100%}
+
+/* ============ ANNOUNCEMENT + NAV ============ */
+.announce{background:var(--banner-bg);color:var(--on-banner);text-align:center;padding:9px 16px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;min-width:0}
+.announce a{color:var(--brass-soft);text-decoration:none;font-weight:700;white-space:nowrap}
+.announce span{min-width:0}
+
+nav{position:sticky;top:0;z-index:80;background:color-mix(in srgb, var(--ivory) 90%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,4vw,32px);min-width:0}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;letter-spacing:.02em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.logo em{font-style:italic;color:var(--brass)}
+.nav-links{display:none;align-items:center;gap:30px}
+.nav-links a{text-decoration:none;font-size:.82rem;font-weight:600;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--moss)}
+.nav-side{display:flex;align-items:center;gap:14px}
+.nav-cta{display:none}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;width:40px;height:40px;align-items:center;justify-content:center;padding:0}
+.burger span{width:20px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(min-width:880px){.nav-links{display:flex}.nav-cta{display:inline-flex}.burger{display:none}}
+
+.mnav{position:fixed;left:0;right:0;top:0;bottom:0;background:var(--ivory);z-index:79;display:flex;flex-direction:column;gap:24px;padding:100px clamp(20px,7vw,40px) 40px;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.mnav.open{transform:translateX(0)}
+.mnav a{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--ink);text-decoration:none}
+@media(min-width:880px){.mnav{display:none}}
+
+/* ============ HERO ============ */
+.hero{background:linear-gradient(175deg,var(--parchment) 0%,var(--ivory) 65%);padding-block:clamp(48px,8vw,88px)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:920px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:56px}}
+.hero h1{font-size:clamp(2.4rem,5.6vw,3.7rem);font-weight:500;line-height:1.08;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--moss-soft)}
+.hero .lede{font-size:1.06rem;margin-bottom:30px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.highlights{display:flex;flex-wrap:wrap;gap:9px 20px}
+.highlights span{font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--moss);display:inline-flex;align-items:center;gap:7px}
+.highlights span:before{content:'';width:5px;height:5px;border-radius:50%;background:var(--brass);flex-shrink:0}
+
+.breath{position:relative;aspect-ratio:1;max-width:460px;margin-inline:auto;width:100%}
+.breath-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--sage);opacity:.3}
+.breath-ring.r2{inset:9%;opacity:.45;animation:pulse 7s ease-in-out infinite}
+.breath-ring.r3{inset:18%;opacity:.6;animation:pulse 7s ease-in-out infinite 1.4s}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.breath-core{position:absolute;inset:26%;border-radius:50%;background:radial-gradient(circle at 34% 28%,var(--card) 0%,var(--sage) 55%,var(--moss) 130%);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.breath-core svg{width:46%;stroke:var(--card)}
+.breath-tag{position:absolute;bottom:2%;left:6%;background:var(--card);border-radius:16px;box-shadow:var(--shadow-sm);padding:14px 18px;display:flex;align-items:center;gap:12px;max-width:220px;border:1px solid var(--line)}
+.breath-tag .dot{width:36px;height:36px;border-radius:50%;background:var(--parchment);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.breath-tag .dot svg{width:18px;height:18px;stroke:var(--moss)}
+.breath-tag strong{display:block;font-size:.8rem;color:var(--ink)}
+.breath-tag small{display:block;font-size:.7rem;color:var(--ink-soft)}
+
+/* ============ generic grids/cards ============ */
+.grid{display:grid;gap:18px}
+.cols-2{grid-template-columns:1fr}
+@media(min-width:640px){.cols-2{grid-template-columns:repeat(2,1fr)}}
+.cols-3{grid-template-columns:1fr}
+@media(min-width:640px){.cols-3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.cols-3{grid-template-columns:repeat(3,1fr)}}
+.cols-4{grid-template-columns:1fr}
+@media(min-width:640px){.cols-4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.cols-4{grid-template-columns:repeat(4,1fr)}}
+.cols-5{grid-template-columns:1fr}
+@media(min-width:640px){.cols-5{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.cols-5{grid-template-columns:repeat(5,1fr)}}
+.cols-6{grid-template-columns:1fr}
+@media(min-width:640px){.cols-6{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.cols-6{grid-template-columns:repeat(3,1fr)}}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;min-width:0}
+.card .ic{width:42px;height:42px;border-radius:11px;background:var(--parchment);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card .ic svg{width:20px;height:20px;stroke:var(--moss)}
+.card h3{font-size:1.08rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:.88rem;line-height:1.65}
+
+/* moss (dark) section variant */
+.on-moss{background:var(--banner-bg);color:var(--on-banner)}
+.on-moss .h2,.on-moss h3{color:var(--on-banner)}
+.on-moss .eyebrow{color:var(--brass-soft)}
+.on-moss .eyebrow .term{color:var(--on-banner-soft)}
+.on-moss .eyebrow:before{background:var(--brass-soft)}
+.on-moss .lede{color:var(--on-banner-soft)}
+
+/* ============ PROGRAM INFO ============ */
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.info-card label{display:block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.info-val{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--ink)}
+.info-val.tbd{font-family:'Manrope',sans-serif;font-size:.88rem;font-style:italic;color:var(--brass);font-weight:600}
+
+/* ============ TIMING ============ */
+.time-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.time-card .slot{font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brass)}
+.time-card .clock{display:flex;align-items:center;gap:10px}
+.time-card .clock svg{width:20px;height:20px;stroke:var(--moss);flex-shrink:0}
+.time-card .val{font-family:'Fraunces',serif;font-size:1.3rem}
+.time-card small{color:var(--ink-soft);font-size:.8rem}
+
+/* ============ PRICING ============ */
+.price-card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:36px 28px;text-align:center;position:relative;box-shadow:var(--shadow-sm);transition:transform .25s ease,box-shadow .25s ease}
+.price-card.hi{border-color:var(--brass);box-shadow:var(--shadow)}
+.price-card:hover{transform:translateY(-4px)}
+.price-flag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brass);color:#211A0C;font-size:.63rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;padding:5px 16px;border-radius:100px;white-space:nowrap}
+.price-card h3{font-size:1.15rem;font-weight:600;margin-bottom:16px}
+.price-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:500;margin-bottom:4px}
+.price-note{font-size:.76rem;color:var(--ink-soft);font-style:italic;margin-bottom:24px}
+.price-list{list-style:none;margin:0 0 26px;padding:0;text-align:left;display:flex;flex-direction:column;gap:10px}
+.price-list li{display:flex;gap:9px;font-size:.86rem;align-items:flex-start}
+.price-list li svg{width:15px;height:15px;stroke:var(--moss);flex-shrink:0;margin-top:3px}
+
+/* ============ ENROLLMENT STEPS ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;counter-reset:step}
+@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;padding:0 16px 34px;text-align:center}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--brass);color:#211A0C;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;position:relative;z-index:2}
+.step:not(:last-child):after{content:'';position:absolute;top:22px;left:50%;width:100%;height:1px;background:rgba(239,233,215,.25);z-index:1}
+@media(max-width:799px){.step:not(:last-child):after{display:none}}
+.step h4{color:var(--ivory);font-size:1.02rem;font-weight:600}
+
+/* ============ ENQUIRY FORM ============ */
+.form-card{max-width:600px;margin-inline:auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,44px);box-shadow:var(--shadow)}
+.frow{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+@media(min-width:560px){.frow{grid-template-columns:1fr 1fr}}
+.field label{display:block;font-size:.76rem;font-weight:700;color:var(--ink);margin-bottom:7px}
+.field .req{color:var(--brass)}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 13px;font-family:inherit;font-size:.9rem;color:var(--ink);background:var(--ivory);transition:border-color .2s ease;min-height:44px}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--moss-soft);outline-offset:1px;border-color:var(--moss)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:var(--ink-soft);margin:2px 0 22px}
+.consent input{margin-top:3px;accent-color:var(--moss)}
+#formMsg{margin-top:14px;text-align:center;font-size:.86rem;font-weight:700;color:var(--moss);display:none}
+#formMsg.show{display:block}
+
+/* ============ FINAL CTA ============ */
+.final{background:linear-gradient(165deg,var(--banner-bg) 0%,var(--banner-bg-2) 100%);color:var(--on-banner);text-align:center;position:relative;overflow:hidden}
+.final:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(169,132,63,.16),transparent 45%),radial-gradient(circle at 85% 80%,rgba(140,160,126,.14),transparent 45%)}
+.final .wrap{position:relative;z-index:1}
+.final h2{color:var(--on-banner)}
+.final .lede{color:var(--on-banner-soft);margin-bottom:34px}
+.final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ============ FOOTER ============ */
+footer{background:#1A1C16;color:rgba(239,233,215,.68);padding-block:56px 26px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:40px}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.foot-logo{font-family:'Fraunces',serif;font-size:1.25rem;color:#EFE9D7;margin-bottom:8px}
+.foot-logo em{font-style:italic;color:var(--brass-soft)}
+footer h4{color:#EFE9D7;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+footer ul a{text-decoration:none;color:rgba(239,233,215,.6);font-size:.86rem}
+footer ul a:hover{color:var(--brass-soft)}
+.foot-bottom{border-top:1px solid rgba(239,233,215,.12);padding-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:.76rem;color:rgba(239,233,215,.42)}
+.foot-bottom a{text-decoration:none;color:rgba(239,233,215,.42)}
+
+/* mobile sticky CTA */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--banner-bg);padding:12px clamp(16px,4vw,32px);display:flex;box-shadow:0 -8px 22px rgba(0,0,0,.18)}
+.sticky a{flex:1;text-align:center}
+@media(min-width:880px){.sticky{display:none}}
+@media(max-width:879px){body{padding-bottom:70px}}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="announce">
+  <span>Yoga Teacher Training &nbsp;&mdash;&nbsp; Now Enrolling USA Students</span>
+  <a href="#enroll">Enquire Now &rarr;</a>
+</div>
+
+<nav>
+  <a href="#hero" class="logo">Sakthi <em>Yogalaya</em></a>
+  <div class="nav-links">
+    <a href="#benefit">Why Teach</a>
+    <a href="#program">Program</a>
+    <a href="#timing">Timing</a>
+    <a href="#included">Included</a>
+    <a href="#plans">Plans</a>
+  </div>
+  <div class="nav-side">
+    <a href="#enroll" class="btn btn-brass nav-cta">Enroll Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mnav" id="mnav">
+  <a href="#benefit">Why Teach</a>
+  <a href="#program">Program</a>
+  <a href="#timing">Timing</a>
+  <a href="#included">Included</a>
+  <a href="#plans">Plans</a>
+  <a href="#enroll" class="btn btn-brass btn-block" style="margin-top:10px">Enroll Now</a>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Online Yoga<br><em>Teacher Training</em></h1>
+      <p class="lede">Build your knowledge, practice and confidence to step into your yoga teaching journey &mdash; live, online, from anywhere in the USA.</p>
+      <div class="hero-btns">
+        <a href="#enroll" class="btn btn-brass">Start Your Journey</a>
+        <a href="#program" class="btn btn-line">See Training Details</a>
+      </div>
+      <div class="highlights">
+        <span>Live Online</span>
+        <span>Expert Guidance</span>
+        <span>Structured Training</span>
+        <span>Certification</span>
+      </div>
+    </div>
+    <div class="breath" aria-hidden="true">
+      <div class="breath-ring"></div>
+      <div class="breath-ring r2"></div>
+      <div class="breath-ring r3"></div>
+      <div class="breath-core">
+        <svg viewBox="0 0 100 100" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="50" cy="21" r="7.5"/>
+          <path d="M50 28.5 L50 52 M50 38 L30 50 M50 38 L70 50 M50 52 L36 78 M50 52 L64 78"/>
+        </svg>
+      </div>
+      <div class="breath-tag">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg></div>
+        <div><strong>Live Online Training</strong><small>From anywhere in the USA</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK HIGHLIGHTS STRIP -->
+<div class="wrap">
+  <div class="grid cols-4" id="quickstrip"></div>
+</div>
+
+<!-- MAIN BENEFIT SECTION -->
+<section id="benefit">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Sadhana</span> &mdash; dedicated practice</p>
+      <h2 class="h2">The Power of <em>Yoga Teacher Training</em></h2>
+      <p class="lede">Why Become a Yoga Teacher? Training as a teacher changes your relationship with yoga itself &mdash; from something you do, to a practice you understand well enough to share.</p>
+    </div>
+    <div class="grid cols-3" style="margin-top:44px">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 4c-4 3-4 6 0 9-4 3-4 6 0 9"/><path d="M12 4c4 3 4 6 0 9 4 3 4 6 0 9"/></svg></div><h3>Deepen Your Practice</h3><p>Move beyond the physical postures into a fuller understanding of what you practice and why.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-4-1L3 20l1-5.5a8.6 8.6 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2 8.5 8.5 0 0 1 21 11.5z"/></svg></div><h3>Build Teaching Confidence</h3><p>Practice cueing, sequencing and holding space for a class in a supported training environment.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2"/><path d="M19 15H6"/></svg></div><h3>Learn Authentic Yoga</h3><p>Study the tradition behind the practice &mdash; philosophy, principles and practice as one whole.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h16"/></svg></div><h3>Develop Teaching Skills</h3><p>Learn how to structure a class, guide a room and communicate clearly as a teacher.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.3"/></svg></div><h3>Create Your Own Yoga Journey</h3><p>Use your training as a foundation to shape a teaching path that's genuinely your own.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM INFORMATION -->
+<section id="program" style="background:var(--parchment)">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Vidya</span> &mdash; knowledge</p>
+      <h2 class="h2">Training <em>Details</em></h2>
+      <p class="lede">A clear overview of the training. Exact details are confirmed with you directly when you enquire.</p>
+    </div>
+    <div class="grid cols-3" style="margin-top:44px">
+      <div class="info-card"><label>Course Start</label><div class="info-val tbd">To be confirmed</div></div>
+      <div class="info-card"><label>Program Duration</label><div class="info-val tbd">To be confirmed</div></div>
+      <div class="info-card"><label>Training Format</label><div class="info-val">Live, Online</div></div>
+      <div class="info-card"><label>Class Schedule</label><div class="info-val tbd">To be confirmed</div></div>
+      <div class="info-card"><label>Certification</label><div class="info-val tbd">Details confirmed on completion</div></div>
+      <div class="info-card"><label>Location</label><div class="info-val">Online &mdash; Worldwide</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMING -->
+<section id="timing">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Samaya</span> &mdash; time</p>
+      <h2 class="h2">Choose Your <em>Timing</em></h2>
+      <p class="lede">Session options designed around USA time zones. Exact times are confirmed for each training group.</p>
+    </div>
+    <div class="grid cols-3" style="margin-top:44px">
+      <div class="time-card">
+        <span class="slot">Morning Session</span>
+        <div class="clock"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="val">[Time]</span></div>
+        <small>ET&nbsp;/&nbsp;CT&nbsp;/&nbsp;MT&nbsp;/&nbsp;PT &mdash; to be confirmed</small>
+      </div>
+      <div class="time-card">
+        <span class="slot">Evening Session</span>
+        <div class="clock"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="val">[Time]</span></div>
+        <small>ET&nbsp;/&nbsp;CT&nbsp;/&nbsp;MT&nbsp;/&nbsp;PT &mdash; to be confirmed</small>
+      </div>
+      <div class="time-card">
+        <span class="slot">Weekend Session</span>
+        <div class="clock"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="val">[Time]</span></div>
+        <small>ET&nbsp;/&nbsp;CT&nbsp;/&nbsp;MT&nbsp;/&nbsp;PT &mdash; to be confirmed</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included" style="background:var(--parchment)">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Abhyasa</span> &mdash; steady practice</p>
+      <h2 class="h2">What's <em>Included</em></h2>
+    </div>
+    <div class="grid cols-6" style="margin-top:44px">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Live Online Training</h3><p>Real-time sessions with your instructor, not pre-recorded videos.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2"/></svg></div><h3>Course Materials</h3><p>Reference materials to support your learning through the program.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 12l3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Practical Training</h3><p>Hands-on sessions applying what you learn, not just theory.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div><h3>Instructor Guidance</h3><p>Direct feedback and support from your trainer throughout the course.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-4-1L3 20l1-5.5a8.6 8.6 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2 8.5 8.5 0 0 1 21 11.5z"/></svg></div><h3>Teaching Practice</h3><p>Structured opportunities to practice teaching and receive feedback.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M8 13l-1.5 8L12 18l5.5 3L16 13"/></svg></div><h3>Certificate of Completion</h3><p>Awarded on successful completion of the training requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS / PRICING -->
+<section id="plans">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Sankalpa</span> &mdash; intention</p>
+      <h2 class="h2">Choose Your <em>Plan</em></h2>
+      <p class="lede">Pricing shown in USD for USA students. Final details are confirmed when you enquire.</p>
+    </div>
+    <div class="grid cols-2" style="max-width:760px;margin:44px auto 0">
+      <div class="price-card">
+        <h3>[Program Option 1]</h3>
+        <div class="price-num">$[Price]</div>
+        <p class="price-note">Payment terms to be confirmed</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Live online training</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Course materials</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Practical training</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Certificate of completion</li>
+        </ul>
+        <a href="#enroll" class="btn btn-line btn-block">Enroll Now</a>
+      </div>
+      <div class="price-card hi">
+        <div class="price-flag">Most Popular</div>
+        <h3>[Program Option 2]</h3>
+        <div class="price-num">$[Price]</div>
+        <p class="price-note">Payment terms to be confirmed</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Live online training</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Course materials</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Practical training</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>1:1 instructor time</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Certificate of completion</li>
+        </ul>
+        <a href="#enroll" class="btn btn-brass btn-block">Enroll Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLLMENT -->
+<section class="on-moss" id="enroll">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <p class="eyebrow" style="justify-content:center"><span class="term">Ārambha</span> &mdash; beginning</p>
+      <h2 class="h2">Start Your <em>Yoga Teacher Journey</em></h2>
+      <p class="lede">Four simple steps from enquiry to your first live session.</p>
+    </div>
+    <div class="steps" style="margin-top:48px">
+      <div class="step"><div class="step-num">1</div><h4>Choose Your Program</h4></div>
+      <div class="step"><div class="step-num">2</div><h4>Submit Your Details</h4></div>
+      <div class="step"><div class="step-num">3</div><h4>Confirm Your Schedule</h4></div>
+      <div class="step"><div class="step-num">4</div><h4>Begin Your Training</h4></div>
+    </div>
+
+    <div class="form-card" style="margin-top:20px">
+      <form id="enrollForm">
+        <div class="frow">
+          <div class="field"><label for="f-name">Full Name <span class="req">*</span></label><input id="f-name" type="text" required></div>
+          <div class="field"><label for="f-email">Email Address <span class="req">*</span></label><input id="f-email" type="email" required></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="f-phone">Phone Number</label><input id="f-phone" type="tel"></div>
+          <div class="field"><label for="f-state">City / State (USA)</label><input id="f-state" type="text" placeholder="e.g. Denver, CO"></div>
+        </div>
+        <div class="field" style="margin-bottom:16px">
+          <label for="f-program">Program Interest</label>
+          <select id="f-program">
+            <option value="" disabled selected>Select an option</option>
+            <option>Program Option 1</option>
+            <option>Program Option 2</option>
+            <option>Not sure yet &mdash; I'd like guidance</option>
+          </select>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="f-msg">Message</label>
+          <textarea id="f-msg" placeholder="Tell us about your goals, experience, or preferred time zone..."></textarea>
+        </div>
+        <label class="consent"><input type="checkbox" id="f-consent" checked required>I agree to be contacted about Sakthi Yogalaya's Online Yoga Teacher Training program.</label>
+        <button type="submit" class="btn btn-brass btn-block">Enroll Now</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="h2">Ready to Begin Your<br>Yoga Journey?</h2>
+    <p class="lede">Take the next step toward deepening your practice and developing the skills to teach yoga with confidence.</p>
+    <div class="final-btns">
+      <a href="#enroll" class="btn btn-brass">Enquire Now</a>
+      <a href="#program" class="btn btn-line-light">See Training Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Sakthi <em>Yogalaya</em></div>
+        <p style="font-size:.86rem;color:rgba(239,233,215,.55)">Online Yoga Teacher Training</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#benefit">Why Teach</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#enroll">Enroll</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>[Email]</li>
+          <li>[Phone]</li>
+          <li>[Website]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Sakthi Yogalaya. All Rights Reserved.</span>
+      <span><a href="javascript:void(0)">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="javascript:void(0)">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky"><a href="#enroll" class="btn btn-brass">Enroll Now</a></div>
+
+<script>
+// Quick highlights strip (populate from hero highlight labels, styled as its own row)
+(function(){
+  var items=[
+    {label:'Live Online', ic:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/>'},
+    {label:'Expert Guidance', ic:'<path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-4-1L3 20l1-5.5a8.6 8.6 0 0 1-1-4A8.4 8.4 0 0 1 11.5 2 8.5 8.5 0 0 1 21 11.5z"/>'},
+    {label:'Structured Training', ic:'<path d="M4 6h16M4 12h16M4 18h10"/>'},
+    {label:'Certification', ic:'<circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/>'}
+  ];
+  var box=document.getElementById('quickstrip');
+  if(!box)return;
+  var html='';
+  items.forEach(function(it){
+    html+='<div class="card" style="text-align:center;padding:20px"><div class="ic" style="margin:0 auto 10px"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">'+it.ic+'</svg></div><h3 style="font-size:.92rem">'+it.label+'</h3></div>';
+  });
+  box.innerHTML=html;
+})();
+
+// Mobile menu
+(function(){
+  var btn=document.getElementById('burger');
+  var menu=document.getElementById('mnav');
+  var navEl=document.querySelector('nav');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&navEl){menu.style.top=navEl.getBoundingClientRect().bottom+'px';}
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+
+// Enrollment form (client-side confirmation - not yet connected to email/CRM)
+(function(){
+  var form=document.getElementById('enrollForm');
+  var msg=document.getElementById('formMsg');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.textContent='Thank you! Your enquiry has been received. Our team will be in touch with you shortly.';
+    msg.classList.add('show');
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
