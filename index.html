@@ -109,8 +109,11 @@ section{padding-block:clamp(56px,9vw,104px)}
 /* ============ HEADER ============ */
 .topbar{background:var(--banner-bg);color:var(--on-banner)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:16px;flex-wrap:wrap;min-width:0}
-.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.02em;text-decoration:none;color:var(--on-banner);white-space:nowrap}
-.logo em{font-style:italic;color:var(--brass-soft)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo img{height:40px;width:auto;display:block}
+.logo-text{display:flex;flex-direction:column;line-height:1.15}
+.logo-name{font-family:'Fraunces',serif;font-weight:600;font-style:italic;font-size:1.1rem;color:var(--on-banner)}
+.logo-tag{font-size:.6rem;font-weight:600;letter-spacing:.06em;color:var(--brass-soft)}
 .topbar-right{display:flex;align-items:center;gap:16px}
 .topbar-tag{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-banner-soft);display:none}
 @media(min-width:640px){.topbar-tag{display:inline}}
@@ -240,7 +243,7 @@ footer{background:#1A0F2B;color:rgba(251,248,246,.68);padding-block:44px 24px}
 
 <div class="topbar">
   <div class="wrap">
-    <a href="#top" class="logo">Sakthi <em>Yogalaya</em></a>
+    <a href="#top" class="logo"><img src="logo-icon.png" alt="Sakthi Yogalaya"><span class="logo-text"><span class="logo-name">Sakthi Yogalaya</span><span class="logo-tag">FOR HEALTHY BODY &amp; HEALTHY MIND</span></span></a>
     <div class="topbar-right">
       <span class="topbar-tag">Online Yoga Teacher Training</span>
       <a href="#enroll" class="btn btn-brass btn-sm">Enroll Now</a>
