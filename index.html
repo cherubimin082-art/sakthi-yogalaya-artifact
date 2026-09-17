@@ -109,12 +109,12 @@ section{padding-block:clamp(56px,9vw,104px)}
 
 /* ============ HEADER ============ */
 .topbar{background:#fff;border-bottom:1px solid var(--line)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:10px;gap:16px;flex-wrap:wrap;min-width:0}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
-.brand img.mark{height:48px;width:auto;display:block}
-.brand img.wordmark{height:34px;width:auto;display:block}
-.topbar .brand img.mark{height:52px}
-.topbar .brand img.wordmark{height:36px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:8px;gap:16px;flex-wrap:wrap;min-width:0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand img.mark{height:38px;width:auto;display:block}
+.brand .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--sage);white-space:nowrap}
+.brand .brand-name em{font-style:italic;color:var(--sage)}
+.topbar .brand img.mark{height:42px}
 .wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:11px 20px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-decoration:none;min-height:44px;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 8px 20px rgba(37,211,102,.32)}
 .wa-btn:hover{transform:translateY(-2px)}
 .wa-btn svg{width:19px;height:19px;fill:#fff;flex-shrink:0}
@@ -154,12 +154,13 @@ section{padding-block:clamp(56px,9vw,104px)}
 .card .ic{width:42px;height:42px;border-radius:11px;background:var(--parchment);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .card .ic svg{width:20px;height:20px;stroke:var(--brass)}
 .card h3{font-size:1.04rem;font-weight:600;margin-bottom:7px}
+#why .card h3{color:var(--sage)}
 .card p{color:var(--ink-soft);font-size:.87rem;line-height:1.6}
 
 /* ============ TRAINING DETAILS (combined) ============ */
 .details-bg{background:var(--parchment)}
 .info-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-.info-card label{display:block;font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.info-card label{display:block;font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
 .info-val{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink)}
 .info-val.tbd{font-family:'Manrope',sans-serif;font-size:.86rem;font-style:italic;color:var(--brass);font-weight:600}
 
@@ -170,8 +171,10 @@ section{padding-block:clamp(56px,9vw,104px)}
 @media(min-width:560px){.time-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.time-grid{grid-template-columns:repeat(4,1fr)}}
 .time-pill{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-align:center}
-.time-pill .slot{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:4px}
 .time-pill .val{font-family:'Fraunces',serif;font-size:1.05rem}
+.time-pill .et{color:var(--brass);font-weight:700}
+.timing-label{text-align:center;font-family:'Fraunces',serif;font-size:1.02rem;font-weight:600;color:var(--moss);margin-bottom:14px}
+.timing-label span{font-family:'Manrope',sans-serif;font-weight:600;font-size:.72rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;margin-left:6px}
 
 .included-list{list-style:none;margin:0 auto;padding:0;max-width:640px;display:flex;flex-direction:column;gap:10px}
 .included-list li{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.9rem;font-weight:600}
@@ -210,11 +213,15 @@ section{padding-block:clamp(56px,9vw,104px)}
 #formMsg.show{display:block}
 
 /* ============ FOOTER ============ */
-footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24px}
-.foot-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:26px 16px}
+.foot-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+footer .brand .brand-name,footer .brand .brand-name em{color:#fff}
 .foot-meta{font-size:.82rem;color:rgba(255,255,255,.55)}
 .foot-contact{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:.82rem;color:rgba(255,255,255,.55)}
-.foot-bottom{margin-top:10px;font-size:.74rem;color:rgba(255,255,255,.38)}
+.foot-link{display:inline-flex;align-items:center;gap:6px;color:inherit;text-decoration:none}
+.foot-link:hover{color:#fff}
+.foot-link svg{width:15px;height:15px;flex-shrink:0}
+.foot-bottom{margin-top:6px;font-size:.74rem;color:rgba(255,255,255,.38)}
 </style>
 </head>
 <body>
@@ -223,7 +230,7 @@ footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24p
   <div class="wrap">
     <a href="#top" class="brand">
       <img class="mark" src="logo-mark.png" alt="Sakthi Yogalaya icon">
-      <img class="wordmark" src="logo-wordmark.png" alt="Sakthi Yogalaya">
+      <span class="brand-name">Sakthi <em>Yogalaya</em></span>
     </a>
     <a href="javascript:void(0)" class="wa-btn" id="waBtn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>WhatsApp</a>
   </div>
@@ -301,12 +308,16 @@ footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24p
     </div>
 
     <div class="sub-block">
-      <h3 class="sub-h3">Choose Your Timing</h3>
+      <h3 class="sub-h3">Available Timings</h3>
+      <p class="timing-label">Practical Class<span>(Weekdays)</span></p>
       <div class="time-grid">
-        <div class="time-pill"><span class="val">9:30 PM &ndash; 10:30 PM ET</span></div>
-        <div class="time-pill"><span class="val">11:30 PM &ndash; 12:30 AM ET</span></div>
-        <div class="time-pill"><span class="val">7:00 AM &ndash; 8:00 AM ET</span></div>
-        <div class="time-pill"><span class="val">10:30 PM &ndash; 2:30 AM ET</span></div>
+        <div class="time-pill"><span class="val">9:30 PM &ndash; 10:30 PM <span class="et">ET</span></span></div>
+        <div class="time-pill"><span class="val">11:30 PM &ndash; 12:30 AM <span class="et">ET</span></span></div>
+        <div class="time-pill"><span class="val">7:00 AM &ndash; 8:00 AM <span class="et">ET</span></span></div>
+      </div>
+      <p class="timing-label" style="margin-top:28px">Theory Class<span>(Weekend)</span></p>
+      <div class="time-grid" style="grid-template-columns:1fr;max-width:280px">
+        <div class="time-pill"><span class="val">10:30 PM &ndash; 2:30 AM <span class="et">ET</span></span></div>
       </div>
     </div>
 
@@ -365,25 +376,15 @@ footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24p
           <div class="field"><label for="f-phone">Phone Number</label><input id="f-phone" type="tel"></div>
           <div class="field"><label for="f-state">City / State (USA)</label><input id="f-state" type="text" placeholder="e.g. Denver, CO"></div>
         </div>
-        <div class="frow">
-          <div class="field"><label for="f-exp">Yoga Experience</label>
-            <select id="f-exp">
-              <option value="" disabled selected>Select an option</option>
-              <option>Beginner / no prior experience</option>
-              <option>Some experience practicing yoga</option>
-              <option>Regular yoga practitioner</option>
-              <option>Fitness / wellness professional</option>
-            </select>
-          </div>
-          <div class="field"><label for="f-timing">Preferred Timing</label>
-            <select id="f-timing">
-              <option value="" disabled selected>Select an option</option>
-              <option>9:30 PM &ndash; 10:30 PM ET</option>
-              <option>11:30 PM &ndash; 12:30 AM ET</option>
-              <option>7:00 AM &ndash; 8:00 AM ET</option>
-              <option>10:30 PM &ndash; 2:30 AM ET</option>
-            </select>
-          </div>
+        <div class="field" style="margin-bottom:16px">
+          <label for="f-exp">Yoga Experience</label>
+          <select id="f-exp">
+            <option value="" disabled selected>Select an option</option>
+            <option>Beginner / no prior experience</option>
+            <option>Some experience practicing yoga</option>
+            <option>Regular yoga practitioner</option>
+            <option>Fitness / wellness professional</option>
+          </select>
         </div>
         <label class="consent"><input type="checkbox" id="f-consent" checked>I agree to be contacted about Sakthi Yogalaya's Online Yoga Teacher Training program.</label>
         <button type="submit" class="btn btn-brass btn-block">Submit Enrollment</button>
@@ -399,18 +400,22 @@ footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24p
   <div class="wrap foot-wrap">
     <a href="#top" class="brand">
       <img class="mark" src="logo-mark.png" alt="Sakthi Yogalaya icon">
-      <img class="wordmark" src="logo-wordmark.png" alt="Sakthi Yogalaya">
+      <span class="brand-name">Sakthi <em>Yogalaya</em></span>
     </a>
     <div class="foot-meta">Online Yoga Teacher Training</div>
-    <div class="foot-contact"><span>[Email]</span><span>[Phone]</span><span>[Website]</span></div>
+    <div class="foot-contact">
+      <a href="mailto:sakthiyogalaya@gmail.com" class="foot-link">sakthiyogalaya@gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      <a href="tel:+18043007141" class="foot-link">+1 (804) 300-7141 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <a href="https://sakthiyogalaya.com" target="_blank" rel="noopener" class="foot-link">&#127760; sakthiyogalaya.com</a>
+    </div>
     <div class="foot-bottom">&copy; 2026 Sakthi Yogalaya. All Rights Reserved.</div>
   </div>
 </footer>
 
 <script>
-// WhatsApp number in international format, digits only (no +, spaces or dashes) e.g. '15551234567'.
-// Set this once the real Sakthi Yogalaya WhatsApp Business number is available.
-var WHATSAPP_NUMBER = '';
+// WhatsApp number in international format, digits only (no +, spaces or dashes).
+// Currently set to the contact number given for the footer (+1 804-300-7141). Update here if a different number should receive enrollment enquiries on WhatsApp.
+var WHATSAPP_NUMBER = '18043007141';
 
 // Nav WhatsApp button
 (function(){
@@ -439,14 +444,12 @@ var WHATSAPP_NUMBER = '';
     var phone = document.getElementById('f-phone').value.trim();
     var city = document.getElementById('f-state').value.trim();
     var exp = document.getElementById('f-exp').value;
-    var timing = document.getElementById('f-timing').value;
 
     if(WHATSAPP_NUMBER){
       var lines = ['New enrollment enquiry — Sakthi Yogalaya', 'Name: ' + name, 'Email: ' + email];
       if(phone) lines.push('Phone: ' + phone);
       if(city) lines.push('City/State: ' + city);
       if(exp) lines.push('Experience: ' + exp);
-      if(timing) lines.push('Preferred Timing: ' + timing);
       var text = encodeURIComponent(lines.join('\n'));
       window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text, '_blank', 'noopener');
       msg.textContent = 'Opening WhatsApp to complete your enrollment…';
