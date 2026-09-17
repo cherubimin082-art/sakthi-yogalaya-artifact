@@ -88,6 +88,7 @@ p{margin:0}
 .eyebrow:before{content:'';width:22px;height:1px;background:var(--brass)}
 .h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:500;line-height:1.16;margin-bottom:14px}
 .h2 em{font-style:italic;color:var(--sage);font-weight:500}
+#why .h2,#details .h2{color:var(--sage)}
 .lede{color:var(--ink-soft);font-size:1rem;max-width:60ch;line-height:1.8}
 section{padding-block:clamp(56px,9vw,104px)}
 .center{text-align:center;margin-inline:auto}
@@ -109,11 +110,11 @@ section{padding-block:clamp(56px,9vw,104px)}
 /* ============ HEADER ============ */
 .topbar{background:#fff;border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:10px;gap:16px;flex-wrap:wrap;min-width:0}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
-.brand img{height:48px;width:auto;display:block}
-.brand span{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:500;color:var(--sage)}
-.brand span em{font-style:italic;font-weight:500;color:var(--sage)}
-.topbar .brand img{height:56px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+.brand img.mark{height:48px;width:auto;display:block}
+.brand img.wordmark{height:34px;width:auto;display:block}
+.topbar .brand img.mark{height:52px}
+.topbar .brand img.wordmark{height:36px}
 .wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:11px 20px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-decoration:none;min-height:44px;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 8px 20px rgba(37,211,102,.32)}
 .wa-btn:hover{transform:translateY(-2px)}
 .wa-btn svg{width:19px;height:19px;fill:#fff;flex-shrink:0}
@@ -122,7 +123,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 .hero{background:linear-gradient(175deg,var(--parchment) 0%,var(--ivory) 65%);padding-block:clamp(48px,8vw,92px)}
 .hero .wrap{text-align:center;max-width:760px}
 .hero h1{font-size:clamp(2.3rem,6vw,3.5rem);font-weight:500;line-height:1.08;margin-bottom:16px}
-.hero h1 em{font-style:italic;color:var(--moss-soft)}
+.hero h1 em{font-style:italic;color:var(--sage)}
 .hero .tagline{font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--moss);margin-bottom:22px}
 .hero .tagline .sep{color:var(--brass);margin:0 8px}
 .hero .lede{margin-inline:auto;font-size:1.05rem;margin-bottom:32px}
@@ -133,6 +134,13 @@ section{padding-block:clamp(56px,9vw,104px)}
 .hero-fact .ic{width:34px;height:34px;border-radius:50%;background:var(--parchment);display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
 .hero-fact .ic svg{width:17px;height:17px;stroke:var(--brass)}
 .hero-fact span{display:block;font-size:.74rem;font-weight:700;color:var(--ink)}
+
+/* ============ VIDEO PREVIEW ============ */
+.video-bg{background:var(--parchment)}
+.video-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:520px;margin:40px auto 0}
+@media(min-width:560px){.video-grid{grid-template-columns:1fr 1fr}}
+.video-frame{aspect-ratio:9/16;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:#000}
+.video-frame iframe{width:100%;height:100%;border:0;display:block}
 
 /* ============ generic grids/cards ============ */
 .grid{display:grid;gap:16px}
@@ -184,15 +192,9 @@ section{padding-block:clamp(56px,9vw,104px)}
 .price-list li svg{width:15px;height:15px;stroke:var(--good);flex-shrink:0;margin-top:3px}
 
 /* ============ ENROLLMENT ============ */
-.enroll-bg{background:var(--banner-bg);color:var(--on-banner)}
-.enroll-bg .eyebrow{color:var(--brass-soft)}
-.enroll-bg .eyebrow .term{color:var(--on-banner-soft)}
-.enroll-bg .eyebrow:before{background:var(--brass-soft)}
-.enroll-bg .h2{color:var(--on-banner)}
-.enroll-bg .h2 em{color:var(--brass-soft)}
-.enroll-bg .lede{color:var(--on-banner-soft)}
+.enroll-bg{background:var(--parchment)}
 
-.form-card{max-width:600px;margin:32px auto 0;background:var(--card);color:var(--ink);border-radius:20px;padding:clamp(24px,4vw,42px);box-shadow:var(--shadow)}
+.form-card{max-width:600px;margin:32px auto 0;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,42px);box-shadow:var(--shadow)}
 .frow{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
 @media(min-width:520px){.frow{grid-template-columns:1fr 1fr}}
 .field label{display:block;font-size:.76rem;font-weight:700;color:var(--ink);margin-bottom:7px}
@@ -209,10 +211,9 @@ section{padding-block:clamp(56px,9vw,104px)}
 
 /* ============ FOOTER ============ */
 footer{background:var(--moss);color:rgba(255,255,255,.68);padding-block:44px 24px}
-.foot-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-align:left}
-footer .brand span,footer .brand span em{color:#fff}
+.foot-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
 .foot-meta{font-size:.82rem;color:rgba(255,255,255,.55)}
-.foot-contact{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-start;font-size:.82rem;color:rgba(255,255,255,.55)}
+.foot-contact{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:.82rem;color:rgba(255,255,255,.55)}
 .foot-bottom{margin-top:10px;font-size:.74rem;color:rgba(255,255,255,.38)}
 </style>
 </head>
@@ -220,11 +221,11 @@ footer .brand span,footer .brand span em{color:#fff}
 
 <div class="topbar">
   <div class="wrap">
-    <a href="javascript:void(0)" class="wa-btn" id="waBtn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>WhatsApp</a>
     <a href="#top" class="brand">
-      <img src="logo.jpeg" alt="Sakthi Yogalaya">
-      <span>Sakthi <em>Yogalaya</em></span>
+      <img class="mark" src="logo-mark.png" alt="Sakthi Yogalaya icon">
+      <img class="wordmark" src="logo-wordmark.png" alt="Sakthi Yogalaya">
     </a>
+    <a href="javascript:void(0)" class="wa-btn" id="waBtn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>WhatsApp</a>
   </div>
 </div>
 
@@ -266,6 +267,20 @@ footer .brand span,footer .brand span em{color:#fff}
   </div>
 </section>
 
+<!-- VIDEO PREVIEW -->
+<section class="video-bg" id="video">
+  <div class="wrap">
+    <div class="center" style="max-width:680px">
+      <h2 class="h2">See the <em>Training in Action</em></h2>
+      <p class="lede">A short look inside Sakthi Yogalaya's Online Yoga Teacher Training.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/WPsS0q0r4so" title="Sakthi Yogalaya training preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/SAQv2MunQjY" title="Sakthi Yogalaya training preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
 <!-- 3. TRAINING DETAILS (combined: details + timing + included) -->
 <section class="details-bg" id="details">
   <div class="wrap">
@@ -277,11 +292,11 @@ footer .brand span,footer .brand span em{color:#fff}
 
     <div class="grid cols-3" style="margin-top:40px">
       <div class="info-card"><label>Course Start</label><div class="info-val">September 26</div></div>
-      <div class="info-card"><label>Schedule</label><div class="info-val" style="font-size:.9rem">Monday - Friday (Practical Class)<br>Saturday - Sunday (Theory Class)</div></div>
+      <div class="info-card"><label>Schedule</label><div class="info-val" style="font-size:.9rem">Monday - Friday <span style="color:var(--brass)">(Practical Class)</span><br>Saturday - Sunday <span style="color:var(--brass)">(Theory Class)</span></div></div>
       <div class="info-card"><label>Duration</label><div class="info-val">4 Months</div></div>
       <div class="info-card"><label>Format</label><div class="info-val">100% Online</div></div>
       <div class="info-card"><label>Age Group</label><div class="info-val">18+</div></div>
-      <div class="info-card"><label>Certification</label><div class="info-val tbd">Confirmed on completion</div></div>
+      <div class="info-card"><label>Certification</label><div class="info-val tbd">Confirmed on completion</div><div style="margin-top:8px;font-size:.78rem;display:flex;gap:12px;flex-wrap:wrap"><a href="https://www.yogaiya.in/" target="_blank" rel="noopener" style="color:var(--moss);font-weight:700;text-decoration:underline">Yogaiya</a><a href="https://yogaalliance.org/" target="_blank" rel="noopener" style="color:var(--moss);font-weight:700;text-decoration:underline">Yoga Alliance</a></div></div>
       <div class="info-card"><label>Location</label><div class="info-val">Online &mdash; Worldwide</div></div>
     </div>
 
@@ -383,8 +398,8 @@ footer .brand span,footer .brand span em{color:#fff}
 <footer>
   <div class="wrap foot-wrap">
     <a href="#top" class="brand">
-      <img src="logo-icon.png" alt="Sakthi Yogalaya">
-      <span>Sakthi <em>Yogalaya</em></span>
+      <img class="mark" src="logo-mark.png" alt="Sakthi Yogalaya icon">
+      <img class="wordmark" src="logo-wordmark.png" alt="Sakthi Yogalaya">
     </a>
     <div class="foot-meta">Online Yoga Teacher Training</div>
     <div class="foot-contact"><span>[Email]</span><span>[Phone]</span><span>[Website]</span></div>
